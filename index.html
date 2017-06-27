@@ -131,7 +131,12 @@ function html() {
   var html = prompt("Introduzca HTML Para insertar. Presione Cancel para obtener ayuda.");
   }
   if(html === null) {
+    if(lang == "1") {
     alert("Here is a simple HTML doc:\n\n<u>text</u>: Underlines the text inside of the tags.\n<i>text</i>: Makes the text italic.\n<button>text</button>: makes a button with the text inside of the tag.\n<a href='link'>text</a>: Creates a link (specified by href) that is displayed as the text inside the tags.\n<b>text</b>: makes the text inside the tags bold.\n\n, Visit www.w3schools.com to learn more about HTML.");
+    }
+    if(lang == "2") {
+      alert("Aquí está un documento HTML sencillo:\n\n<u>texto</u>: subraya el texto dentro de las etiquetas.\n <i>texto</i>: Hace que el texto quede en cursiva.\n</button>: crea un botón con el texto dentro de la etiqueta.\n<a href='link'>texto</a>: Crea un enlace (especificado por href) que se muestra como el texto dentro de las etiquetas.\n<b>texto</b>: hace que el texto dentro de las etiquetas esté en negrita.\n\n, visite www.w3schools.com para obtener más información sobre HTML.");
+    }
   }
   else {
     var spot = prompt("specify where to add the HTML. (h1 for the title, h2 for the subtitle, and p for the paragraph)");
@@ -144,14 +149,38 @@ function html() {
   }
 }
 function save() {
+  if(lang == "1") {
   var name = prompt("Enter a name for your document that you will remember")
-  localStorage.setItem(name, document.getElementById("h1").innerHTML + "?¨?ˆ®8¥©ƒ?†" + document.getElementById("h2").innerHTML + "?¨?ˆ®8¥©ƒ?†" + document.getElementById("p").innerHTML + "?¨?ˆ®8¥©ƒ?†" + document.getElementById("mainarea").style.background + "?¨?ˆ®8¥©ƒ?†" + document.getElementById("h1").style.background + "?¨?ˆ®8¥©ƒ?†" + document.getElementById("h1").style.color + "?¨?ˆ®8¥©ƒ?†" + document.getElementById("mainarea").style.color + "?¨?ˆ®8¥©ƒ?†" + document.getElementById("p").style.margin)
+  }
+    if(lang == "2") {
+  var name = prompt("Introduzca un nombre para su documento que recordará")
+  }
+  localStorage.setItem(name, document.getElementById("h1").innerHTML + "˙¨∆ˆ®∞¥©ƒ∂†" + document.getElementById("h2").innerHTML + "˙¨∆ˆ®∞¥©ƒ∂†" + document.getElementById("p").innerHTML + "˙¨∆ˆ®∞¥©ƒ∂†" + document.getElementById("mainarea").style.background + "˙¨∆ˆ®∞¥©ƒ∂†" + document.getElementById("h1").style.background + "˙¨∆ˆ®∞¥©ƒ∂†" + document.getElementById("h1").style.color + "˙¨∆ˆ®∞¥©ƒ∂†" + document.getElementById("mainarea").style.color + "˙¨∆ˆ®∞¥©ƒ∂†" + document.getElementById("p").style.margin)
+ if(lang == "1") {
   alert("Saved succesfully.")
+ }
+ if(lang == "2") {
+  alert("Guardado exitosamente.")
+ }
 }
 function load() {
+  if(lang == "1") {
   var name = prompt("Enter the name of the file")
+  }
+   if(lang == "2") {
+  var name = prompt("Introduzca el nombre del archivo")
+  }
   var it = localStorage.getItem(name)
-  var item = it.split("?¨?ˆ®8¥©ƒ?†")
+  if(it == null) {
+    if(lang == "1") {
+    alert("Something went wrong when you were loading the file. Maybe you misspelled the name?")
+    }
+    if(lang == "2") {
+    alert("Se produjo un error al cargar el archivo. Tal vez escribió mal el nombre?")
+    }
+  }
+  else {
+  var item = it.split("˙¨∆ˆ®∞¥©ƒ∂†")
   document.getElementById("h1").innerHTML = item[0]
   document.getElementById("h2").innerHTML = item[1]
   document.getElementById("p").innerHTML = item[2]
@@ -160,10 +189,21 @@ function load() {
   document.getElementById("h1").style.color = item[5]
   document.getElementById("mainarea").style.color = item[6]
   document.getElementById("p").style.margin = item[7]
+ if(lang == "1") {
  alert("Loaded successfully.")
+ }
+  if(lang == "2") {
+ alert("Cargado correctamente.")
+ }
+}
 }
 function marg() {
+  if(lang == "1") {
   var size = prompt("Enter size")
+  }
+  if(lang == "2") {
+  var size = prompt("Introduzca el tamaño")
+  }
   document.getElementById("p").style.margin = size
 }
 
