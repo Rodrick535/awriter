@@ -162,7 +162,7 @@ function save() {
     if(lang == "2") {
   var name = prompt("Introduzca un nombre para su documento que recordará")
   }
-  localStorage.setItem(name, document.getElementById("h1").innerHTML + "˙¨∆ˆ®∞¥©ƒ∂†" + document.getElementById("h2").innerHTML + "˙¨∆ˆ®∞¥©ƒ∂†" + document.getElementById("p").innerHTML + "˙¨∆ˆ®∞¥©ƒ∂†" + document.getElementById("mainarea").style.background + "˙¨∆ˆ®∞¥©ƒ∂†" + document.getElementById("h1").style.background + "˙¨∆ˆ®∞¥©ƒ∂†" + document.getElementById("h1").style.color + "˙¨∆ˆ®∞¥©ƒ∂†" + document.getElementById("mainarea").style.color + "˙¨∆ˆ®∞¥©ƒ∂†" + document.getElementById("p").style.margin)
+  localStorage.setItem(name, document.getElementById("h1").innerHTML + "˙¨∆ˆ®∞¥©ƒ∂†" + document.getElementById("h2").innerHTML + "˙¨∆ˆ®∞¥©ƒ∂†" + document.getElementById("p").innerHTML + "˙¨∆ˆ®∞¥©ƒ∂†" + document.getElementById("mainarea").style.background + "˙¨∆ˆ®∞¥©ƒ∂†" + document.getElementById("h1").style.background + "˙¨∆ˆ®∞¥©ƒ∂†" + document.getElementById("h1").style.color + "˙¨∆ˆ®∞¥©ƒ∂†" + document.getElementById("mainarea").style.color + "˙¨∆ˆ®∞¥©ƒ∂†" + document.getElementById("p").style.margin + "˙¨∆ˆ®∞¥©ƒ∂†" + document.getElementById("p").style.fontFamily)
  if(lang == "1") {
   alert("Saved succesfully.")
  }
@@ -196,6 +196,7 @@ function load() {
   document.getElementById("h1").style.color = item[5]
   document.getElementById("mainarea").style.color = item[6]
   document.getElementById("p").style.margin = item[7]
+  document.getElementById("p").style.fontFamily = item[8]
  if(lang == "1") {
  alert("Loaded successfully.")
  }
@@ -229,6 +230,7 @@ function lan() {
   document.getElementById("sa").innerHTML = "Salvar"
   document.getElementById("lo").innerHTML = "Carga"
   document.getElementById("ma").innerHTML = "Tamaño del margen"
+  document.getElementById("fo").innerHTML = "Fuente"
   if(document.getElementById("h1").innerHTML == "Title") {
   document.getElementById("h1").innerHTML = "Título"
   }
@@ -253,6 +255,7 @@ function lan() {
   document.getElementById("sa").innerHTML = "Save"
   document.getElementById("lo").innerHTML = "Load"
   document.getElementById("ma").innerHTML = "Margin size"
+  document.getElementById("fo").innerHTML = "Font"
   if(document.getElementById("h1").innerHTML == "Título") {
   document.getElementById("h1").innerHTML = "Title"
   }
@@ -264,4 +267,13 @@ function lan() {
   }
   }
 }
+function font() {
+  if(lang == "1") {
+   document.getElementById("p").style.fontFamily = prompt("Enter font name:")
+  }
+  if(lang == "2") {
+   document.getElementById("p").style.fontFamily = prompt("Introduzca el nombre de la fuente:")
+  }
+
+  }
 </script>
