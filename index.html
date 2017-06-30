@@ -1,12 +1,13 @@
 <link rel="shortcut icon" href="Drawing.jpeg" type="image/jpeg">
+<title>Article Writer 3.0</title>
 <div id="h"><header id="hh" onclick="window.open('index.html')">Article Writer 3.0</header><p></p>
 <div class="area"><button onclick="embed()" id="em">Embed</button><button id="pr" onclick="print1()">Print</button><button onclick="tbg()" id="tb">Title BG</button><button onclick="ttc()" id="tc">Title text color</button><button onclick="abg()" id="ab">Article BG</button><button onclick="spc()" id="sp">Subtitle and paragraph color</button><button onclick="help()" id="he">Update notes</button><button onclick="html()" id="ht">Insert HTML</button><button onclick="save()" id="sa">Save</button><button onclick="load()" id="lo">Load</button><button onclick="marg()" id="ma">Margin size</button><button id="fo" onclick="font()">Font</button></div><p></p></div>
 <div class="area" id="mainarea"><header id="h1" contenteditable>Title</header><h2 id="h2" contenteditable>Subtitle</h2><p id="p" contenteditable>Paragraph</p></div>
 <div id="langArea"><p style="text-align: left">Set language/Elegir lenguaje
 </p>
-<select id="lang"><option value="1">English</option><option value="2">Español</option></select><button class="small" onclick="lan()">Set</button></div>
+<select id="lang"><option value="1">English</option><option value="2">Español</option></select><button class="small" onclick="lan()">Set</button>
 <a href="contact.html">Contact me</a><br>
-<p><a href="https://twitter.com/intent/tweet?button_hashtag=ArticleWriter" class="twitter-hashtag-button" data-text="Check out this article writer I found!" data-url="https://rodrick535.github.io/awriter" data-show-count="false">Tweet #ArticleWriter</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<p><a href="https://twitter.com/intent/tweet?button_hashtag=ArticleWriter" class="twitter-hashtag-button" data-text="Check out this article writer I found!" data-url="https://rodrick535.github.io/awriter" data-show-count="false">Tweet #ArticleWriter</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p></div>
 <style>header {
   font-size: 35px;
   text-align: center;
@@ -14,7 +15,6 @@
   background: black;
   color: white;
 }
-
 h2 {
   text-align: center;
   font-family: calibri;
@@ -23,7 +23,6 @@ p {
   font-family: calibri;
   text-align: center;
 }
-
 .area {
   border: 3px solid black;
 }
@@ -35,7 +34,6 @@ button {
   padding: 5px 10px;
   transition: 0.3s;
 }
-
 button:hover {
   background: white;
   color: black;
@@ -125,9 +123,11 @@ function spc() {
 function help() {
   if(lang == "1") {
   alert("Once again, Article Writer has been recreated, and is now better than ever! \n\nNEW FEATURES IN 3.0\n*Recreated from scratch (again)\n*Edit text directly\n*PRINTING!\n*New article layout!\n*If you don't like it in the current window, click on the title for the full experience!\n*SAVING/LOADING!\n*More to come soon!\n\nOTHER UPDATES:\n\n*June 17th, 2017\nNow you can save more that just one article at a time, with unlimited save slots!\n\n*June 19th, 2017\nAdded margin size adjustment, and article colors (and margins) will now save!\n\n*June 26th, 2017\nIn progress of making a Spanish version of this. You can select Spanish from the language menu.");
+  alert("*June 30th, 2017\nI'm too lazy to add more stuff to this help menu. If you want to check out the updates to Article Writer, (Or anything else I made) check out the dev feed, with a bunch of posts I've written. (At the time I'm writing this, there's just 1.) Anyways, that's all I need to say. The ONLY reason I'm not removing the update notes is so newcomers can see what has happened in the past.")
   }
    if(lang == "2") {
   alert("Una vez más, el escritor del artículo ha sido recreado, y ahora está mejor que nunca! \n*NUEVAS CARACTERÍSTICAS EN 3.0 \n*Reconstruido desde cero (de nuevo)\n*Editar texto directamente\n*IMPRESIÓN!\n*¡Nuevo diseño de artículos!\n * Si no le gusta en la ventana actual, En el título de la experiencia completa!\n*¡AHORRANDO/CARGANDO!\n*¡Más pronto!\n\nMAS ACTUALIZACIONES:\n\n*17 de junio 2017\nAhora, puede guardar más de un artículo en un\n\n*19 de junio de 2017\n El ajuste de tamaño de margen agregado y los colores (y márgenes) del artículo se guardarán ahora!\n\n* 26 de junio de 2017\n En curso de hacer una versión en español de esta. Puede seleccionar español en el menú de idioma.");
+  alert("*30 de junio de 2017\nSoy demasiado perezoso para agregar más cosas a este menú de ayuda. Si quieres revisar las actualizaciones de Article Writer, (o cualquier otra cosa que he hecho) echa un vistazo al feed de dev, con un montón de mensajes que he escrito. (En el momento en que estoy escribiendo esto, sólo hay 1.) De todos modos, eso es todo lo que tengo que decir. La única razón por la que no estoy eliminando las notas de actualización es que los recién llegados puedan ver lo que ha sucedido en el pasado.")
   }
 }
 function html() {
@@ -214,7 +214,6 @@ function marg() {
   }
   document.getElementById("p").style.margin = size
 }
-
 function lan() {
   if(document.getElementById("lang").value == "2") {
   lang = "2"
@@ -274,6 +273,5 @@ function font() {
   if(lang == "2") {
    document.getElementById("p").style.fontFamily = prompt("Introduzca el nombre de la fuente:")
   }
-
   }
 </script>
