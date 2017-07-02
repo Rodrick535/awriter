@@ -7,7 +7,7 @@
 <a href="contact.html">Contact me</a><br>
 <p><a href="https://twitter.com/intent/tweet?button_hashtag=ArticleWriter" class="twitter-hashtag-button" data-text="Check out this article writer I found!" data-url="https://rodrick535.github.io/awriter" data-show-count="false">Tweet #ArticleWriter</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
 <script>
-var lang = "1"
+  var lang = "1"
 function embed() {
   var h1 = document.getElementById("h1").innerHTML
   var h2 = document.getElementById("h2").innerHTML
@@ -28,12 +28,12 @@ function print1() {
   print()
   var wind = 'index.html'
   if(lang == "1") {
-  document.getElementById("h").innerHTML = "<header id='hh'>Article Writer 3.0</header><p>Since you just printed, fullscreen mode WILL NOT WORK. To use fullscreen mode, save the project, refresh the page, and load the project.</p><div class='area'><button onclick='embed()' id='em'>Embed</button><button id='pr' onclick='print1()'>Print</button><button onclick='tbg()' id='tb'>Title BG</button><button onclick='ttc()' id='tc'>Title text color</button><button onclick='abg()' id='ab'>Article BG</button><button onclick='spc()' id='sp'>Subtitle and paragraph color</button><button onclick='help()' id='he'>Update notes</button><button onclick='html()' id='ht'>Insert HTML</button><button onclick='save()' id='sa'>Save</button><button onclick='load()' id='lo'>Load</button><button onclick='marg()' id='ma'>Margin size</button></div><p></p>"
-   document.getElementById("langArea").innerHTML = "<p style='text-align: left'>Set language</p><select id='lang'><option value='1'>English</option><option value='2'>Español (BETA)</option></select><button class='small' onclick='lan()'>Set</button>"
+  document.getElementById("h").innerHTML = "<header id='hh'>Article Writer 3.0</header><p></p><div class='area'><button onclick='embed()' id='em'>Embed</button><button id='pr' onclick='print1()'>Print</button><button onclick='tbg()' id='tb'>Title BG</button><button onclick='ttc()' id='tc'>Title text color</button><button onclick='abg()' id='ab'>Article BG</button><button onclick='spc()' id='sp'>Subtitle and paragraph color</button><button onclick='help()' id='he'>Update notes</button><button onclick='html()' id='ht'>Insert HTML</button><button onclick='save()' id='sa'>Save</button><button onclick='load()' id='lo'>Load</button><button onclick='marg()' id='ma'>Margin size</button><button id='fo' onclick='font()'>Font</button></div><p></p>"
+   document.getElementById("langArea").innerHTML = "<p style='text-align: left'>Set language</p><select id='lang'><option value='1'>English</option><option value='2'>Español</option></select><button class='small' onclick='lan()'>Set</button>"
   }
    if(lang == "2") {
-  document.getElementById("h").innerHTML = "<header id='hh'>Article Writer 3.0</header><p>Ya que acaba de imprimir, el modo de pantalla completa NO TRABAJARÁ. Para utilizar el modo de pantalla completa, guarde el proyecto, actualice la página y cargue el proyecto.</p><div class='area'><button onclick='embed()' id='em'>Embed</button><button id='pr' onclick='print1()'>Print</button><button onclick='tbg()' id='tb'>Title BG</button><button onclick='ttc()' id='tc'>Title text color</button><button onclick='abg()' id='ab'>Article BG</button><button onclick='spc()' id='sp'>Subtitle and paragraph color</button><button onclick='help()' id='he'>Update notes</button><button onclick='html()' id='ht'>Insert HTML</button><button onclick='save()' id='sa'>Save</button><button onclick='load()' id='lo'>Load</button><button onclick='marg()' id='ma'>Margin size</button></div><p></p>"
-   document.getElementById("langArea").innerHTML = "<p style='text-align: left'>Set language</p><select id='lang'><option value='2'>Español (BETA)</option><option value='1'>English</option></select><button class='small' onclick='lan()'>Set</button>"
+  document.getElementById("h").innerHTML = "<header id='hh'>Article Writer 3.0</header><p></p><div class='area'><button onclick='embed()' id='em'>Embed</button><button id='pr' onclick='print1()'>Print</button><button onclick='tbg()' id='tb'>Title BG</button><button onclick='ttc()' id='tc'>Title text color</button><button onclick='abg()' id='ab'>Article BG</button><button onclick='spc()' id='sp'>Subtitle and paragraph color</button><button onclick='help()' id='he'>Update notes</button><button onclick='html()' id='ht'>Insert HTML</button><button onclick='save()' id='sa'>Save</button><button onclick='load()' id='lo'>Load</button><button onclick='marg()' id='ma'>Margin size</button><button id='fo' onclick='font()'>Font</button></div><p></p>"
+   document.getElementById("langArea").innerHTML = "<p style='text-align: left'>Set language</p><select id='lang'><option value='2'>Español</option><option value='1'>English</option></select><button class='small' onclick='lan()'>Set</button>"
    lan()
   }
    document.getElementById('h1').innerHTML = h1
@@ -230,6 +230,7 @@ function font() {
   }
 
   }
+
 </script>
 <style>header {
   font-size: 35px;
